@@ -73,14 +73,15 @@ app.route('/feedback').post(async (req, res) => {
 
   try {
 
-    const { user, comment, rating } = req.body;
+    const { name, email, comment, rating } = req.body;
 
-    if (!user || !comment || !rating) {
+    if (!name || !email || !comment || !rating) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
     const feedbackData = {
-      user,
+      name,
+      email,
       comment,
       rating
     }
