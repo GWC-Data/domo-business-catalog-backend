@@ -49,7 +49,7 @@ app.route('/register').post( async (req, res) => {
 
     if (savedUser) {
       return res.status(201).json({
-        message: 'Register successful',
+        message: 'Registration successful',
         success: true,
       });
     }
@@ -90,7 +90,7 @@ app.route('/feedback').post(async (req, res) => {
 
     if (savedFeedback) {
       return res.status(201).json({
-        message: 'Feedback saved successfully',
+        message: 'Feedback has been saved successfully',
         success: true,
       });
     }
